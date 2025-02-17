@@ -29,11 +29,11 @@ jobs:
           PACKAGES: luci-app-partexp
           NO_REFRESH_CHECK: true
 
- - name: Upload run files as release assets
+# - name: Upload run files as release assets
         uses: softprops/action-gh-release@v2.1.0
         
-      #- name: Upload artifacts
-      #  uses: actions/upload-artifact@v3
+      - name: Upload artifacts
+      uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.arch }}
           path: bin/packages/${{ matrix.arch }}/packages_ci/*.ipk
