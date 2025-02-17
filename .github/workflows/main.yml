@@ -12,6 +12,8 @@ jobs:
       fail-fast: false
       matrix:
         arch:
+          - aarch64_cortex-a53
+          - aarch64_cortex-a72
           - aarch64_generic
  steps:
       - uses: actions/checkout@v3
